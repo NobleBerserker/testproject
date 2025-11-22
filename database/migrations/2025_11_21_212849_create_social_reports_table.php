@@ -18,6 +18,12 @@ return new class extends Migration
             $table->integer('comments')->nullable();
             $table->integer('shares')->nullable();
             $table->timestamps();
+
+            
+            $table->foreign('social_post_id')
+            ->references('id')
+            ->on('social_posts')
+            ->onDelete('cascade');
         });
     }
 
