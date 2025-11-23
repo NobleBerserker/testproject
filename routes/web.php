@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\FacebookController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +23,8 @@ Route::post('/login', [AuthController::class, 'login'])->name('login.submit');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::middleware(['auth:sanctum'])->group(function () {
-    Route::get('/', function () {
-        return view('home'); 
-    });
+    Route::get('/', [HomeController::class, 'index']);
+    Route::get('/post/{postId}', [PostController::class, 'index']);
+    Route::get('/getPosts', [FacebookController::class, 'getPosts'])
+    ->name('getPosts');
 });
