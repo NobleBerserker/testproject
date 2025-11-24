@@ -15,6 +15,7 @@ Facebook Graph API: v24.0
 1. Clone the repository
 ```
 git clone "https://github.com/NobleBerserker/testproject.git"
+cd testproject
 ```
 
 2. Install PHP dependencies
@@ -28,7 +29,16 @@ npm install
 npm run dev
 ```
 
-4. Configure .env by adding your Database credentials and META_ACCESS_TOKEN
+4. Copy .env.example 
+```
+cp .env.example .env
+```
+Configure .env by adding your Database credentials and META_ACCESS_TOKEN
+
+Also generate api key
+```
+php artisan key:generate
+```
 
 5. Run migrations and seeders in an empty database (as set in your .env).
 ```

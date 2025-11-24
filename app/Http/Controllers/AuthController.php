@@ -20,10 +20,9 @@ class AuthController extends Controller
             'email' => 'required|email',
             'password' => 'required|string',
         ]);
-        $remember = $request->has('remember');
         $credentials = $request->only('email','password');
 
-        if (!Auth::attempt($credentials, $remember)) {
+        if (!Auth::attempt($credentials)) {
             return back()->withErrors([
                 'message' => 'Invalid credentials.',
             ]);
