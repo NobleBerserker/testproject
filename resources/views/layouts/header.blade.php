@@ -4,15 +4,11 @@
     <meta charset="utf-8" />    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />    
     @vite('resources/css/app.css')  
+    @vite('resources/js/app.js') 
 </head> 
+<title>Test Project</title>
 <body class="bg-gray-100 min-h-screen">
-	<nav class="bg-white shadow p-4 flex justify-end items-center">
-		<form action="{{ route('getPosts') }}" method="GET">
-		    @csrf
-		    <button type="submit" class="px-4 py-2 bg-cyan-500 text-white rounded hover:bg-cyan-600">
-		        Update Posts
-		    </button>
-		</form>
+	<nav class="bg-white shadow p-4 flex justify-end items-center gap-5">
 		@auth
             <form method="POST" action="{{ route('logout') }}" class="ml-2">
                 @csrf

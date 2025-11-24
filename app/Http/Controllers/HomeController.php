@@ -10,7 +10,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $posts = SocialPost::with('report')
+        $posts = SocialPost::with('latestReport')
         ->orderBy('created_time', 'desc')
         ->get();
 
