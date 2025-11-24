@@ -2,14 +2,14 @@
 This app creates tables (social_posts, social_reports) within a specified database (configured in .env). After the user logs in, they can view the posts of a specific facebook page (configured in .env). The metrics page will help analyze performance trends.
 
 ## Environment
-PHP: 8.2
-Laravel: 10.39
-MariaDB: 10.4.28 (XAMPP)
-Node: 22.x
-NPM: 11.6
-Tailwind CSS: 4.1.17
-ApexCharts: 5.3.6
-Facebook Graph API: v24.0
+- PHP: 8.2
+- Laravel: 10.39
+- MariaDB: 10.4.28 (XAMPP)
+- Node: 22.x
+- NPM: 11.6
+- Tailwind CSS: 4.1.17
+- ApexCharts: 5.3.6
+- Facebook Graph API: v24.0
 
 ## Setup
 1. Clone the repository
@@ -76,12 +76,12 @@ social_reports
 - updated_at: timestamp
 
 ## Controllers
-AuthController -> Handles login/logout
-HomeController -> Fetches posts with the latest reports to make a list.
-PostController -> Prepares data to use with ApexCharts
+- AuthController -> Handles login/logout
+- HomeController -> Fetches posts with the latest reports to make a list.
+- PostController -> Prepares data to use with ApexCharts
 
 ## Services
-FacebookService -> Handles facebook endpoints
+- FacebookService -> Handles facebook endpoints
 
 ## Development Environment
 For testing purposes the seeders add random users and a test user with these login credentials:
